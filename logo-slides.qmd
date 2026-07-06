@@ -1,0 +1,13 @@
+---
+title: Workshop on Translation of Stata to R
+author: Stephen Thompson
+institute: Centre for Advanced Research Computing
+title-image: https://avatars.githubusercontent.com/u/278628511?s=400&u=ba33ed091d293c8e9da8789d491a2c1964c3a53c&v=4
+title-image-width: 40%
+title-image-alt: The Stata2R Logo, an R overlaid with white squares.
+format:
+  revealjs:
+    logo: images/arc-logo.svg
+---
+
+{{< include _content.qmd >}}

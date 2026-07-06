@@ -1,0 +1,17 @@
+## Today's Talk
+
+-   Introducing Stephen Thompson
+
+## Introducing Stephen
+
+-   Senior Research Software Engineer Since October 2023
+
+-   Background in augmented reality for keyhole surgery.
+
+-   informus, education, EMAP, sense-base.
+
+## Workshop Format
+
+```{=html}
+<iframe src="https://github.com/stata-translations/Stata2R/blob/main/docs/workshop.md#workshop-format" allowtransparency="true" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen></iframe>
+```
