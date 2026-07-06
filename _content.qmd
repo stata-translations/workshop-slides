@@ -31,7 +31,7 @@
 
 
 ## What's in a plugin
-
+[Plugin Source](https://github.com/stata-translations/Stata2R){target="_blank"}
 
 ```md
 └── skills
