@@ -29,3 +29,33 @@
 | 15:10 to 16:30 |Run translated Code, compare different translations. Assess code translation efforts against criteria listed in post workshop survey.|
 | 16:30 to 17:00 | Wrap-up/discussion/ Fill in [post work shop surveys](https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&Token=f4b2e858071244d8916b09d1fde3e573).|
 
+
+## What's in a plugin
+
+
+```md
+└── skills
+    ├── add-missing-tests
+    │   └── SKILL.md
+    ├── add-stata-tests-r
+    │   └── SKILL.md
+    ├── hello
+    │   └── SKILL.md
+    ├── pseudocode-to-r
+    │   ├── assets
+    │   ├── references
+    │   │   └── language_mappings.md
+    │   └── SKILL.md
+    ├── run-stata
+    │   └── SKILL.md
+    ├── stata-to-pseudocode
+    │   ├── assets
+    │   ├── references
+    │   └── SKILL.md
+    └── translation-strategy
+        ├── assets
+        ├── references
+        └── SKILL.md
+
+15 directories, 8 files
+```
