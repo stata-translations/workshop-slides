@@ -28,9 +28,16 @@
 
 5 minutes to Fill in [Pre Workshop Surveys](https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u&Token=409a4539b2494331b09f760446f1032e){target="_blank"}
 
+## Introduction - Claude
+
+[Demo of Claude Code CLI and App.](https://github.com/stata-translations/Stata2R/blob/main/docs/workshop.md#setup-and-installation)
+
 
 ## What's in a plugin
+A plugin is a collection of `Skills`
+
 [Plugin Source](https://github.com/stata-translations/Stata2R){target="_blank"}
+
 
 ```md
 └── skills
@@ -58,3 +65,7 @@
 
 15 directories, 8 files
 ```
+
+## What's in a Skill
+Plain text:
+[Plugin Source](https://github.com/stata-translations/Stata2R/blob/main/stata-translation/skills/hello/SKILL.md)
