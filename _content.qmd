@@ -2,7 +2,7 @@
 
 | Time | Content |
 |------|---------|
-| 13:00 to 13:20 | Introduction <br> Fill in [Pre Workshop Surveys](https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u&Token=409a4539b2494331b09f760446f1032e){target="_blank"} <br> Check Pre-Requisites |
+| 13:00 to 13:20 | Introduction <br> Fill in [Pre Workshop Surveys](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u){target="_blank"} <br> Check Pre-Requisites |
 | 13:20 to 13:40 | Talk Through of Plugin Architecture <br> What to Consider When Translating Code.|
 | 13:40 to 14:50 | Interactively translate Stata packages to other languages. (Different packages, same workflow)|
 
@@ -15,7 +15,7 @@
 | Time | Content |
 |------|---------|
 | 15:10 to 16:30 | Run translated Code <br> Compare different translations. <br> Assess code translation for post workshop survey. |
-| 16:30 to 17:00 | Wrap-up <br> Discussion <br> Fill in [post work shop surveys](https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&Token=f4b2e858071244d8916b09d1fde3e573){target="_blank"}. |
+| 16:30 to 17:00 | Wrap-up <br> Discussion <br> Fill in [post work shop surveys](https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu){target="_blank"}. |
 
 ## Introduction - [Prerequisites](https://github.com/stata-translations/Stata2R/blob/main/docs/workshop.md#essential){target="_blank"}
 
@@ -26,7 +26,7 @@
 
 ## Introduction - Time for Survey
 
-5 minutes to Fill in [Pre Workshop Surveys](https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u&Token=409a4539b2494331b09f760446f1032e){target="_blank"}
+5 minutes to Fill in [Pre Workshop Surveys](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u){target="_blank"}
 
 ## Introduction - Claude
 
@@ -87,9 +87,9 @@ We have around 80 minutes to assess the translated code.
 
  - Can you run the translated code and get equivalent results to Stata?
  - How does your translation compare to other peoples?
- - Work through the questions in the [post work shop survey](https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&Token=f4b2e858071244d8916b09d1fde3e573){target="_blank"}. (If you assessed more than one package you can submit multiple results).
+ - Work through the questions in the [post work shop survey](https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu){target="_blank"}. (If you assessed more than one package you can submit multiple results).
  
 ## Wrap up and Discussion.
 
  - Any general questions. 
- - Fill in the [post work shop survey](https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&Token=f4b2e858071244d8916b09d1fde3e573){target="_blank"} before leaving if you haven't already done so.
+ - Fill in the [post work shop survey](https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu){target="_blank"} before leaving if you haven't already done so.
