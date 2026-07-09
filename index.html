@@ -10,7 +10,8 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Stephen Thompson">
-  <title>Workshop on Translation of Stata to R</title>
+  <meta name="dcterms.date" content="2026-07-10">
+  <title>Stata to R Workshop</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -197,29 +198,16 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-    <h1 class="title">Workshop on Translation of Stata to R</h1>
+    <h1 class="title">Stata to R Workshop</h1>
         <figure>
-      <img src="https://avatars.githubusercontent.com/u/278628511?s=400&amp;u=ba33ed091d293c8e9da8789d491a2c1964c3a53c&amp;v=4" width="40%" alt="The Stata2R Logo, an R overlaid with white squares.">
+      <img src="https://avatars.githubusercontent.com/u/278628511?s=400&amp;u=ba33ed091d293c8e9da8789d491a2c1964c3a53c&amp;v=4" width="30%" alt="The Stata2R Logo, an R overlaid with white squares.">
       </figure>
         <p class="author">Stephen Thompson</p>
-        <p class="institute" style="color: #999;">Centre for Advanced Research Computing</p>
-    </section>
-<section id="todays-talk" class="slide level2">
-<h2>Today’s Talk</h2>
-<ul>
-<li class="fragment">Introducing Stephen Thompson</li>
-</ul>
-</section>
-<section id="introducing-stephen" class="slide level2">
-<h2>Introducing Stephen</h2>
-<ul>
-<li class="fragment"><p>Senior Research Software Engineer Since October 2023</p></li>
-<li class="fragment"><p>Background in augmented reality for keyhole surgery.</p></li>
-<li class="fragment"><p>informus, education, EMAP, sense-base.</p></li>
-</ul>
-</section>
-<section id="workshop-times" class="slide level2">
-<h2>Workshop Times</h2>
+        <p class="institute" style="color: #999;">UCL Centre for Advanced Research Computing and UCL Innovative Clinical Trials Unit</p>
+        <p class="date">2026-07-10</p>
+  </section>
+<section id="workshop-plan" class="slide level2">
+<h2>Workshop Plan</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -230,20 +218,20 @@
 <tbody>
 <tr class="odd">
 <td>13:00 to 13:20</td>
-<td>Introduction - Fill in <a href="https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&amp;FormId=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u&amp;Token=409a4539b2494331b09f760446f1032e">Pre Workshop Surveys</a>- Check Pre-Requisites</td>
+<td>Introduction <br> Fill in <a href="https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&amp;FormId=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u&amp;Token=409a4539b2494331b09f760446f1032e" target="_blank">Pre Workshop Surveys</a> <br> Check Pre-Requisites</td>
 </tr>
 <tr class="even">
 <td>13:20 to 13:40</td>
-<td>Talk Through of Plugin Architecture and Points to Consider When Translating Code.</td>
+<td>Talk Through of Plugin Architecture <br> What to Consider When Translating Code.</td>
 </tr>
 <tr class="odd">
 <td>13:40 to 14:50</td>
-<td>Interactively translate Stata packages to other languages. (each participant will work through a particular package, but the workflow will be the same for all)</td>
+<td>Interactively translate Stata packages to other languages. (Different packages, same workflow)</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="workshop-times-1" class="slide level2">
+<section id="workshop-times" class="slide level2">
 <h2>Workshop Times</h2>
 <table class="caption-top">
 <thead>
@@ -260,7 +248,7 @@
 </tbody>
 </table>
 </section>
-<section id="workshop-times-2" class="slide level2">
+<section id="workshop-times-1" class="slide level2">
 <h2>Workshop Times</h2>
 <table class="caption-top">
 <thead>
@@ -272,14 +260,27 @@
 <tbody>
 <tr class="odd">
 <td>15:10 to 16:30</td>
-<td>Run translated Code, compare different translations. Assess code translation efforts against criteria listed in post workshop survey.</td>
+<td>Run translated Code <br> Compare different translations. <br> Assess code translation for post workshop survey.</td>
 </tr>
 <tr class="even">
 <td>16:30 to 17:00</td>
-<td>Wrap-up/discussion/ Fill in <a href="https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&amp;FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&amp;Token=f4b2e858071244d8916b09d1fde3e573">post work shop surveys</a>.</td>
+<td>Wrap-up <br> Discussion <br> Fill in <a href="https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&amp;FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&amp;Token=f4b2e858071244d8916b09d1fde3e573" target="_blank">post work shop surveys</a>.</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="introduction---prerequisites" class="slide level2">
+<h2>Introduction - <a href="https://github.com/stata-translations/Stata2R/blob/main/docs/workshop.md#essential" target="_blank">Prerequisites</a></h2>
+<ul>
+<li class="fragment">Claude Code (CLI or Desktop App)</li>
+<li class="fragment">Stata</li>
+<li class="fragment">R</li>
+<li class="fragment">git + github account</li>
+</ul>
+</section>
+<section id="introduction---time-for-survey" class="slide level2">
+<h2>Introduction - Time for Survey</h2>
+<p>5 minutes to Fill in <a href="https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&amp;FormId=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u&amp;Token=409a4539b2494331b09f760446f1032e" target="_blank">Pre Workshop Surveys</a></p>
 </section>
 <section id="whats-in-a-plugin" class="slide level2">
 <h2>What’s in a plugin</h2>
