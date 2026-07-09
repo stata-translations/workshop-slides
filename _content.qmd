@@ -69,3 +69,27 @@ A plugin is a collection of `Skills`
 ## What's in a Skill
 Plain text:
 [Plugin Source](https://github.com/stata-translations/Stata2R/blob/main/stata-translation/skills/hello/SKILL.md)
+
+## Pause for questions before we start with translation.
+
+ - Has everyone got a Stata package to work on?
+ - Any other questions. 
+
+## Start of interactive Translation Session.
+
+Run through [workshop](https://github.com/stata-translations/Stata2R/blob/main/docs/workshop.md#determine-the-code-translation-strategy){target="_blank"}
+
+Break at 14:50
+
+## Code review and Interactive Running.
+
+We have around 80 minutes to assess the translated code.
+
+ - Can you run the translated code and get equivalent results to Stata?
+ - How does your translation compare to other peoples?
+ - Work through the questions in the [post work shop survey](https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&Token=f4b2e858071244d8916b09d1fde3e573){target="_blank"}. (If you assessed more than one package you can submit multiple results).
+ 
+## Wrap up and Discussion.
+
+ - Any general questions. 
+ - Fill in the [post work shop survey](https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu&Token=f4b2e858071244d8916b09d1fde3e573){target="_blank"} before leaving if you haven't already done so.
