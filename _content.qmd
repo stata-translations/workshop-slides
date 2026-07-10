@@ -29,6 +29,8 @@
 
 5 minutes to Fill in [Pre Workshop Surveys](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwuNcJ7ofdGhDpRexUha3NYhUMU5QQ000NVpFTVRKRTEzRDRCQ0w4V05XMS4u){target="_blank"}
 
+![](images/pre-workshop.png){fig-alt="QR Code link to pre-workshop survey" height="280"}
+
 ## Introduction - Claude
 
 [Demo of Claude Code CLI and App.](https://github.com/stata-translations/Stata2R/blob/main/docs/workshop.md#setup-and-installation)
@@ -90,7 +92,11 @@ We have around 80 minutes to assess the translated code.
  - How does your translation compare to other peoples?
  - Work through the questions in the [post work shop survey](https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu){target="_blank"}. (If you assessed more than one package you can submit multiple results).
  
+  ![](images/post-workshop.png){fig-alt="QR Code link to post-workshop survey" height="180"}
+
 ## Wrap up and Discussion.
 
  - Any general questions. 
  - Fill in the [post work shop survey](https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkgtFALcEfRKnhSRePBd-9dUQjI1SzdIT1pROVBHVDJSNDU3QUNZVTBGTiQlQCN0PWcu){target="_blank"} before leaving if you haven't already done so.
+  
+  ![](images/post-workshop.png){fig-alt="QR Code link to post-workshop survey" height="180"}
