@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><!-- frame-runtime --><!-- base href="https://0c5ed2e2-b57b-4b9a-9ea2-d75988c3fbe3.frame.claudeusercontent.com/_f/1784025820-2bc0/" --><script>window.__FRAME_PREAMBLE={"capabilities":{"downloads":"downloads.BABDwU1K.js","mcp":"mcp.hoz5jxDa.js","permissions":"permissions.ByA9Fd8x.js","self":"self.D3u1zjZe.js","user":"user.Cp1-RnjB.js"},"transforms":"_transforms.DYk1Ltlh.js","comments":"_comments.Dp6RDy7J.js","translate":"_translate.C9eLA9Mu.js"}</script><script>(function(){"use strict";const we="modulepreload",Oe=function(e){return"/"+e},Se={},ee=function(t,n,c){let i=Promise.resolve();function s(f){const a=new Event("vite:preloadError",{cancelable:!0});if(a.payload=f,window.dispatchEvent(a),!a.defaultPrevented)throw f}return i.then(f=>{for(const a of f||[])a.status==="rejected"&&s(a.reason);return t().catch(s)})},te=["light","dark","system"];function ne(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function Y(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function re(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const n=t.theme;return typeof n=="string"&&te.includes(n)}function se(e){try{typeof reportError=="function"?reportError(e):setTimeout(()=>{throw e},0)}catch{}}const oe=Object.freeze(Object.assign(Object.create(null),{user:Object.freeze(Object.assign(Object.create(null),{id:null,isOwner:!1,canEdit:!1,name:null,avatarUrl:null,email:null}))})),ie={};function K(e){if(window===top||e.type==="auxclick"&&e.button!==1)return;const t=e.composedPath?e.composedPath():[e.target];let n=null;for(let f=0;f<t.length;f++){const a=t[f];if(a&&a.matches&&a.matches("a[href],area[href]")){n=a;break}}if(!n&&e.target&&e.target.closest&&(n=e.target.closest("a[href],area[href]")),!n)return;const c=n.getAttribute("href");if(!c)return;let i,s;try{i=new URL(c,document.baseURI),s=new URL(document.baseURI).origin}catch{return}(i.protocol==="http:"||i.protocol==="https:")&&i.origin!==s&&(e.preventDefault(),parent.postMessage({__frame_nav:!0,url:i.href},"*"))}const x={};function I(e){if(window===top)return;const t=Date.now();t-(x[e]||0)<500||(x[e]=t,parent.postMessage({__frame_engaged:!0,kind:e},"*"))}const ae=2e3,J=["wheel","touchstart","touchmove","keydown","pointerdown"];let G=0;function ce(e){e.isTrusted&&(G=Date.now())}function le(){addEventListener("click",K,!0),addEventListener("auxclick",K,!0)}function ue(){for(let e=0;e<J.length;e++)addEventListener(J[e],ce,{capture:!0,passive:!0});addEventListener("scroll",e=>{e.isTrusted&&Date.now()-G<ae&&I("scroll")},{capture:!0,passive:!0}),addEventListener("pointermove",e=>{e.isTrusted&&I("pointer")},{capture:!0,passive:!0}),addEventListener("click",e=>{e.isTrusted&&I("click")},{capture:!0,passive:!0})}const U="__frame_scroll",fe=150,de=310,pe=160,me=3e4;function he(){let e=0,t=!1,n=!1,c=!1,i=0;const s=p=>{try{sessionStorage.setItem(U,JSON.stringify({y:p}))}catch{}},f=()=>{if(t){t=!1;return}n=!0,clearTimeout(e),e=setTimeout(()=>s(scrollY),fe)};try{addEventListener("scroll",f,{passive:!0}),addEventListener("pagehide",()=>{clearTimeout(e),s(scrollY)})}catch{}const a=()=>{let p;try{p=sessionStorage.getItem(U)}catch{return null}if(p===null)return null;let b;try{b=JSON.parse(p)}catch{b=null}const l=b?.y;if(!(typeof l=="number"&&Number.isFinite(l)&&l>=0)){try{sessionStorage.removeItem(U)}catch{}return null}return l};let _=!1;const h=p=>{try{const b=scrollY;scrollTo({top:p,left:0,behavior:"instant"}),i=p,c=!0,s(p);const l=scrollY;l!==b&&(t=!0),l!==p&&!_&&(_=!0,addEventListener("load",()=>{try{if(scrollY===l){const g=a();h(g!==null?g:i)}}catch{}},{once:!0}))}catch{}},o=()=>{try{return!!location.hash}catch{return!0}};let u=!1;const d=()=>{try{if(u||innerWidth>de||innerHeight>pe)return;u=!0;const p=Date.now(),b=()=>{try{removeEventListener("resize",b)}catch{}if(Date.now()-p>me||n||o())return;const l=a();h(l!==null?l:i)};addEventListener("resize",b)}catch{}};let m=!1,y=!1;return{restore(){if(m||(m=!0,o()))return;const p=a();p!==null&&(h(p),d())},promoted(){if(y||(y=!0,o()))return;const p=a();p!==null?(h(p),d()):c&&h(i)}}}function ge(e,t,n){const c=[...t.values()].filter(i=>i.targets.some(s=>s.startsWith(e+".")));return{wrap(i,s){const f=`${e}.${i}`,a=c.filter(_=>_.targets.includes(f));return a.length===0?(..._)=>{try{return s(..._)}catch(h){return Promise.reject(h)}}:(..._)=>{let h=_;for(const u of a){const d=u.module.parameters;if(d)try{h=d(h)}catch{return Promise.reject({code:"transform_error",id:u.id,scope:e,message:"parameters transform failed"})}}let o;try{o=s(...h)}catch(u){o=Promise.reject(u)}return o.then(u=>{for(let d=a.length-1;d>=0;d--){const m=a[d],y=m.module.returns;if(y)try{u=y(u)}catch{return n({id:m.id,scope:e,leg:"returns"}),u}}return u},u=>{for(let d=a.length-1;d>=0;d--){const m=a[d],y=m.module.throws;if(y)try{u=y(u)}catch{return n({id:m.id,scope:e,leg:"throws"}),Promise.reject(u)}}return Promise.reject(u)})}}}}function _e(e,t,n,c=()=>{}){const i=new Set(e.changes??[]),s=new Map;for(const f of i){const a=t[f];a&&s.set(f,a)}return{contract:e.contract,changes:i,flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:s,shellOrigin:n.shellOrigin,mount:n.mount,pipe:f=>ge(f,s,c)}}(function(){const e=Object.defineProperty,t=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let c=0;for(let i=0;i<n.length;i++){const s=n[i];try{e(t,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[s]}catch{}try{e(t,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[s]=="function"&&c++}if(c&&window!==top)try{parent.postMessage({__frame_rtc_lockdown_failed:c},"*")}catch{}})();const ye=1e4,be=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function V(e){for(const t of be)if(t.endsWith(":*"))try{const n=new URL(e);if(`${n.protocol}//${n.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}const T=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),z=window.__FRAME_PREAMBLE?.transforms,q=window.__FRAME_PREAMBLE?.comments,$=window.__FRAME_PREAMBLE?.translate,C=/^[\w.-]+\.js$/,ve=/^[a-z][a-z0-9_-]{0,63}$/;let X=null,P=null;function B(e,t,n){try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}let F=!1;function Q(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,F=!0):F&&(delete t.dataset.theme,t.style.colorScheme="",F=!1)}const M=Object.assign(Object.create(null),{mcp:Object.assign(Object.create(null),{watchTool:{handlerArg:3}})}),R=new Map;function Z(e,t){const n=R.get(e);if(!n)return;const c=Object.assign(Object.create(null),t);Object.assign(n.impl,c),n.impl.__settled=()=>Promise.reject({code:"capability_removed",message:`${e}: method not in this runtime`});const i=n.queue;n.queue=[];for(const s of i){const f=c[s.method];if(f)if(M[e]?.[s.method])try{s.resolve(f(...s.args))}catch{k(s,M[e][s.method].handlerArg,{code:"transform_error",message:`${e}.${s.method} rejected its arguments`})}else f(...s.args).then(s.resolve,s.reject);else{const a={code:"capability_removed",message:`${e}.${s.method} is not in this runtime`},_=M[e]?.[s.method];if(_){k(s,_.handlerArg,a);continue}s.reject(a)}}}function Ee(e,t){const n=R.get(e);if(!n)return;n.impl.__settled=()=>Promise.reject(t);const c=n.queue;n.queue=[];for(const i of c){const s=M[e]?.[i.method];if(s){k(i,s.handlerArg,t);continue}i.reject(t)}}function N(e,t){const n=oe[e];if(!n){Ee(e,t);return}Z(e,Object.fromEntries(Object.entries(n).map(([c,i])=>[c,()=>Promise.resolve(i)])))}function k(e,t,n){if(e.syncState?.dead)return;const c=e.args[t];typeof c=="function"&&queueMicrotask(()=>{if(!e.syncState?.dead)try{c({type:"error",error:n})}catch(i){se(i)}})}const H=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(H&&H.writable===!1)){le(),ue();let e=null;try{e=he()}catch{}const t=H?.value??{};B(window,"claude",t);const n=o=>{const u={impl:Object.create(null),queue:[]};R.set(o,u);const d=u.impl,m=ie[o],y=m===void 0?d:()=>{},p=new Proxy(y,{apply:(b,l,g)=>{const v=m,O=d[v]??d.__settled;return O?O(...g):new Promise((E,w)=>{u.queue.push({method:v,args:g,resolve:E,reject:w})})},get:(b,l)=>{if(typeof l!="string"||l==="then"||l==="toJSON"||l==="valueOf")return;if(l==="toString")return Object.prototype.toString;if(m!==void 0&&(l==="call"||l==="apply"||l==="bind"))return Function.prototype[l];const g=M[o]?.[l];return g?(...v)=>{if(typeof v[g.handlerArg]!="function")throw new TypeError(`${o}.${l} requires a handler function`);const O=d[l];if(O)return O(...v);if(d.__settled){const S={dead:!1},A={args:[...v],syncState:S};return d.__settled().catch(D=>k(A,g.handlerArg,D)),()=>{S.dead=!0}}let E=null;const w={dead:!1};return u.queue.push({method:l,args:v,resolve:S=>{E=typeof S=="function"?S:null,w.dead&&E?.()},reject:()=>{},syncState:w}),()=>{w.dead=!0,E?.()}}:(...v)=>{const O=d[l]??d.__settled;return O?O(...v):new Promise((E,w)=>{u.queue.push({method:l,args:v,resolve:E,reject:w})})}},set:()=>!1});B(t,o,p)};for(const o of Object.keys(T)){if(t[o]!==void 0){B(t,o,t[o]);continue}n(o)}let c=null,i=null,s=0;const f=o=>{o.source!==parent||!V(o.origin)||ne(o.data)&&(c=o.data.__frame_init,P=o.origin,removeEventListener("message",f),clearTimeout(s),i?.())};addEventListener("message",f),parent.postMessage({__frame_connect:!0},"*");const a=new Promise(o=>{i=o,s=setTimeout(()=>{removeEventListener("message",f),o()},ye)}),_=document.readyState==="loading"?new Promise(o=>document.addEventListener("DOMContentLoaded",()=>o(),{once:!0})):Promise.resolve();_.then(()=>{try{e?.restore()}catch{}});const h=o=>{if(!(o.source!==parent||!V(o.origin))&&Y(o.data)){removeEventListener("message",h);try{e?.promoted()}catch{}}};addEventListener("message",h),a.then(async()=>{if(!c||!P){for(const r of R.keys())N(r,{code:"not_granted",message:"frame initialization did not arrive - capability unavailable"});return}Q(c.theme);const o=P;let u=!1,d=!1;addEventListener("message",r=>{if(r.source!==parent||r.origin!==o)return;re(r.data)&&Q(r.data.__frame_theme.theme);const j=r.data?.__fc_mode;j&&typeof j=="object"&&!u&&q&&C.test(q)&&(u=!0,m(q).then(W=>W.install?.(o,j.on===!0)).catch(()=>{}));const L=r.data?.__ft_cmd;L&&typeof L=="object"&&!d&&$&&C.test($)&&(d=!0,m($).then(W=>W.install?.(o,L)).catch(()=>{}))});const m=r=>ee(()=>import("/_runtime/"+r),void 0),y=Object.keys(c.capabilities??{});for(const r of y)Object.hasOwn(T,r)||ve.test(r)&&t[r]===void 0&&(n(r),N(r,{code:"capability_disabled",message:"capability not in this runtime generation"}));const p=y.filter(r=>Object.hasOwn(T,r)).map(r=>[r,T[r]]).filter(r=>typeof r[1]=="string"&&C.test(r[1])),[b,...l]=await Promise.allSettled([z&&C.test(z)?m(z):Promise.resolve({}),...p.map(([,r])=>m(r))]),g=P;X=_e(c,b.status==="fulfilled"&&b.value?.TRANSFORMS||{},{shellOrigin:g,mount:Z},r=>parent.postMessage({__frame_cap_telemetry:r},g));const v=r=>parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:r}},g),O=X;l.forEach((r,j)=>{const L=p[j][0];if(r.status!=="fulfilled"){v(L);return}try{r.value?.install?.(O)}catch{v(L)}});for(const[r,j]of R)if(!(j.queue.length===0&&Object.keys(j.impl).length>0)){if(y.includes(r)){N(r,{code:"capability_disabled",message:"capability not available in this session"});continue}N(r,{code:"not_granted",message:"capability not available in this session"})}await _,parent.postMessage({__frame_ready:!0},P);let E=-1,w=0;const S=()=>{w=0;const r=Math.max(document.documentElement.scrollHeight,document.body?document.body.scrollHeight:0);r!==E&&(E=r,parent.postMessage({__frame_size:!0,h:r},g))},A=()=>{w||(w=setTimeout(S,200))},D=new ResizeObserver(A);D.observe(document.documentElement),document.body&&D.observe(document.body),document.addEventListener("load",A,!0),document.fonts?.ready.then(A,()=>{}),addEventListener("beforeprint",()=>{E=-1,S()}),A(),addEventListener("message",r=>{if(!(r.source!==parent||r.origin!==g)&&Y(r.data)){try{e?.promoted()}catch{}E=-1,A()}})})}})();</script><!-- /frame-runtime --><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Post-Workshop Survey: What People Want Improved</title>
+<style>
+  .viz-root {
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    .viz-root {
+      --surface-1:      #1a1a19;
+      --page-plane:     #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --border:         rgba(255,255,255,0.10);
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --border:         rgba(255,255,255,0.10);
+  }
+  :root[data-theme="light"] .viz-root {
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .viz-root {
+    background: var(--page-plane);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+    padding: 32px 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px 24px;
+    max-width: 760px;
+    width: 100%;
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
+  h1 { font-size: 19px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0 0 8px;
+    max-width: 62ch;
+  }
+
+  .wc-wrap {
+    width: 100%;
+    overflow: hidden;
+    padding: 8px 0 4px;
+  }
+  .wc-wrap svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  text { text-anchor: middle; dominant-baseline: middle; }
+  .wc-big   { fill: var(--wl); font-weight: 800; }
+  @media (prefers-color-scheme: dark) { .wc-big { fill: var(--wd); } }
+  :root[data-theme="dark"] .wc-big { fill: var(--wd); }
+  :root[data-theme="light"] .wc-big { fill: var(--wl); }
+  .wc-muted { fill: var(--text-muted); font-weight: 500; opacity: 0.7; }
+
+  .legend-scale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gridline);
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .legend-scale b { color: var(--text-primary); font-weight: 700; }
+  .legend-scale b.muted { color: var(--text-muted); font-weight: 500; }
+
+  .footnote {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--gridline);
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .table-toggle { margin-top: 16px; }
+  .table-toggle summary {
+    font-size: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    user-select: none;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 7px 8px;
+    border-bottom: 1px solid var(--gridline);
+    vertical-align: top;
+  }
+  th {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.03em;
+  }
+  td:nth-child(3) { color: var(--text-secondary); font-style: italic; }
+</style>
+
+<div class="viz-root">
+  <div class="card">
+    <p class="eyebrow">Stata Translation Workshop · Post-Workshop Survey</p>
+    <h1>What people want improved</h1>
+    <p class="subtitle">Drawn from the "concerns," "RSE role," and 
+"other comments" free-text answers (9 respondents). Words are packed 
+edge-to-edge into a circular cloud, upright or rotated a clean 90° only —
+ no diagonal tilts. Concrete improvement asks are large and colorful; 
+generic subject-matter words (testing, code, Stata…) stay small and gray
+ — they're topic, not an ask.</p>
+
+    <div class="wc-wrap">
+      <svg viewBox="0 0 754 774" xmlns="http://www.w3.org/2000/svg">
+        <text x="392.9" y="387.0" font-size="58" class="wc-big" style="--wl:#2a78d6; --wd:#3987e5;">Verifying Correctness</text>
+        <text x="407.8" y="458.1" font-size="38" class="wc-big" style="--wl:#0f8f63; --wd:#199e70;">Flagging Silent Changes</text>
+        <text x="384.2" y="317.1" font-size="36" class="wc-big" style="--wl:#b5790a; --wd:#c98500;">Understanding Model Limitations</text>
+        <text x="372.0" y="265.6" font-size="27" class="wc-big" style="--wl:#008300; --wd:#008300;">Line-by-Line Review</text>
+        <text x="413.2" y="510.7" font-size="27" class="wc-big" style="--wl:#4a3aa7; --wd:#9085e9;">Human-Readable Test Scripts</text>
+        <text x="375.5" y="220.7" font-size="24" class="wc-big" style="--wl:#e34948; --wd:#e66767;">Reporting Discrepancies</text>
+        <text x="409.2" y="555.6" font-size="24" class="wc-big" style="--wl:#c05a80; --wd:#d55181;">Verifying Self-Corrections</text>
+        <text x="381.4" y="178.3" font-size="24" class="wc-big" style="--wl:#eb6834; --wd:#d95926;">Idiomatic Code Structure</text>
+        <text x="402.8" y="598.0" font-size="24" class="wc-big" style="--wl:#2a78d6; --wd:#3987e5;">Standardized Translation Frameworks</text>
+        <text x="579.8" y="226.4" font-size="22" class="wc-muted" transform="rotate(90 579.8 226.4)">Testing</text>
+        <text x="181.6" y="264.6" font-size="22" class="wc-muted">Code</text>
+        <text x="391.5" y="136.2" font-size="22" class="wc-muted">Translation</text>
+        <text x="414.9" y="639.0" font-size="21" class="wc-big" style="--wl:#0f8f63; --wd:#199e70;">Increasing Rigour</text>
+        <text x="400.8" y="96.7" font-size="21" class="wc-big" style="--wl:#b5790a; --wd:#c98500;">Drop-in Support Clinics</text>
+        <text x="387.5" y="677.3" font-size="20" class="wc-big" style="--wl:#008300; --wd:#008300;">Skill &amp; Plugin Guidance</text>
+        <text x="405.7" y="716.7" font-size="20" class="wc-big" style="--wl:#4a3aa7; --wd:#9085e9;">Incremental Re-translation</text>
+        <text x="383.0" y="57.1" font-size="20" class="wc-big" style="--wl:#e34948; --wd:#e66767;">Generalize Beyond Claude Code</text>
+        <text x="428.3" y="754.9" font-size="20" class="wc-big" style="--wl:#c05a80; --wd:#d55181;">User-Guided Pseudocode Scoping</text>
+        <text x="360.6" y="18.8" font-size="20" class="wc-big" style="--wl:#eb6834; --wd:#d95926;">Maintaining Non-Human Code</text>
+        <text x="147.2" y="138.0" font-size="20" class="wc-big" style="--wl:#2a78d6; --wd:#3987e5;">Environment &amp; PATH Setup</text>
+        <text x="156.4" y="509.2" font-size="20" class="wc-muted">Stata</text>
+        <text x="143.4" y="552.2" font-size="18" class="wc-muted">Documentation</text>
+        <text x="665.9" y="254.2" font-size="18" class="wc-muted">Reliability</text>
+        <text x="179.9" y="206.2" font-size="17" class="wc-muted" transform="rotate(90 179.9 206.2)">Script</text>
+        <text x="129.7" y="244.8" font-size="17" class="wc-muted" transform="rotate(90 129.7 244.8)">Package</text>
+        <text x="512.4" y="139.3" font-size="17" class="wc-muted">Claude</text>
+        <text x="545.4" y="267.8" font-size="12" class="wc-muted" transform="rotate(90 545.4 267.8)">R</text>
+      </svg>
+    </div>
+
+    <div class="legend-scale">
+      <span><b>Bigger &amp; more colorful</b> = a stronger, more specific improvement point</span>
+      <span>·</span>
+      <span><b class="muted">small, gray &amp; faint</b> = general topic, not an ask</span>
+    </div>
+
+    <p class="footnote">
+      <strong>Biggest ask:</strong> a reliable way to verify translated 
+code is actually correct — 5 of 9 respondents raised this independently 
+(code that "looks right but isn't," wanting line-by-line checks, no 
+clear way to check accuracy on large packages, an unverifiable 
+self-correction claim from Claude). Everything else was raised by 1–2 
+respondents each; treat the smaller phrases as individual ideas worth 
+watching, not consensus. Color here is decorative (one hue per phrase, 
+cycled) rather than meaningful — it's there to make each phrase easy to 
+pick out, not to group them.
+    </p>
+
+    <details class="table-toggle">
+      <summary>View themes as table, with a representative quote</summary>
+      <table>
+        <thead><tr><th>Theme</th><th>Respondents</th><th>Representative quote</th></tr></thead>
+        <tbody>
+          <tr><td>Verifying correctness</td><td>5</td><td>"Code that appears to be correct but is not – over confidence."</td></tr>
+          <tr><td>Flagging silent changes</td><td>2</td><td>"My code got simplified by Claude and it just put a comment saying # simplified… report back if it does any simplifications"</td></tr>
+          <tr><td>Understanding model limitations</td><td>2</td><td>"Understanding the limitations, and… where it may need support."</td></tr>
+          <tr><td>Line-by-line review</td><td>1</td><td>"I would want to check it line-by-line and do extensive testing."</td></tr>
+          <tr><td>Human-readable test scripts</td><td>1</td><td>"the test script … wasn't very user-friendly (used testthat package)"</td></tr>
+          <tr><td>Reporting discrepancies</td><td>1</td><td>"discrepancies between my STATA documentation and STATA code… did not flag this issue"</td></tr>
+          <tr><td>Verifying self-corrections</td><td>1</td><td>"Claude claimed to find an error in its translation and correct it; I was unable to verify this"</td></tr>
+          <tr><td>Idiomatic code structure</td><td>1</td><td>"Lack of elegance (e.g. using optimal structures/organisation/logic for each coding language)"</td></tr>
+          <tr><td>Standardized translation frameworks</td><td>1</td><td>"Designing systems/frameworks to standardise code translation processes."</td></tr>
+          <tr><td>Increasing rigour</td><td>1</td><td>"Increasing the rigour of what we do"</td></tr>
+          <tr><td>Drop-in support clinics</td><td>1</td><td>"Drop-in clinic (e.g. every month) where we could ask for advice"</td></tr>
+          <tr><td>Skill &amp; plugin guidance</td><td>1</td><td>"Guidance on writing skills / plugin"</td></tr>
+          <tr><td>Incremental re-translation</td><td>1</td><td>"find a way to translate… new feature… without re-translating everything"</td></tr>
+          <tr><td>Generalize beyond Claude Code</td><td>1</td><td>"Generalisation to beyond Claude Code would be great"</td></tr>
+          <tr><td>User-guided pseudocode scoping</td><td>1</td><td>"pseudo-code writing step should… engage with the user to see if there is functionality… not needed"</td></tr>
+          <tr><td>Maintaining non-human code</td><td>1</td><td>"How can packages be updated/maintained/checked if not human-written?"</td></tr>
+          <tr><td>Environment &amp; PATH setup</td><td>1</td><td>"Need to make sure to set up PATH variables correctly."</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+</div>
+
+</body></html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><!-- frame-runtime --><!-- base href="https://62f39108-542f-4265-b8be-169279fbb066.frame.claudeusercontent.com/_f/1784024791-57a1/" --><script>window.__FRAME_PREAMBLE={"capabilities":{"downloads":"downloads.BABDwU1K.js","mcp":"mcp.hoz5jxDa.js","permissions":"permissions.ByA9Fd8x.js","self":"self.D3u1zjZe.js","user":"user.Cp1-RnjB.js"},"transforms":"_transforms.DYk1Ltlh.js","comments":"_comments.Dp6RDy7J.js","translate":"_translate.C9eLA9Mu.js"}</script><script>(function(){"use strict";const we="modulepreload",Oe=function(e){return"/"+e},Se={},ee=function(t,n,c){let i=Promise.resolve();function s(f){const a=new Event("vite:preloadError",{cancelable:!0});if(a.payload=f,window.dispatchEvent(a),!a.defaultPrevented)throw f}return i.then(f=>{for(const a of f||[])a.status==="rejected"&&s(a.reason);return t().catch(s)})},te=["light","dark","system"];function ne(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function Y(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function re(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const n=t.theme;return typeof n=="string"&&te.includes(n)}function se(e){try{typeof reportError=="function"?reportError(e):setTimeout(()=>{throw e},0)}catch{}}const oe=Object.freeze(Object.assign(Object.create(null),{user:Object.freeze(Object.assign(Object.create(null),{id:null,isOwner:!1,canEdit:!1,name:null,avatarUrl:null,email:null}))})),ie={};function K(e){if(window===top||e.type==="auxclick"&&e.button!==1)return;const t=e.composedPath?e.composedPath():[e.target];let n=null;for(let f=0;f<t.length;f++){const a=t[f];if(a&&a.matches&&a.matches("a[href],area[href]")){n=a;break}}if(!n&&e.target&&e.target.closest&&(n=e.target.closest("a[href],area[href]")),!n)return;const c=n.getAttribute("href");if(!c)return;let i,s;try{i=new URL(c,document.baseURI),s=new URL(document.baseURI).origin}catch{return}(i.protocol==="http:"||i.protocol==="https:")&&i.origin!==s&&(e.preventDefault(),parent.postMessage({__frame_nav:!0,url:i.href},"*"))}const x={};function I(e){if(window===top)return;const t=Date.now();t-(x[e]||0)<500||(x[e]=t,parent.postMessage({__frame_engaged:!0,kind:e},"*"))}const ae=2e3,J=["wheel","touchstart","touchmove","keydown","pointerdown"];let G=0;function ce(e){e.isTrusted&&(G=Date.now())}function le(){addEventListener("click",K,!0),addEventListener("auxclick",K,!0)}function ue(){for(let e=0;e<J.length;e++)addEventListener(J[e],ce,{capture:!0,passive:!0});addEventListener("scroll",e=>{e.isTrusted&&Date.now()-G<ae&&I("scroll")},{capture:!0,passive:!0}),addEventListener("pointermove",e=>{e.isTrusted&&I("pointer")},{capture:!0,passive:!0}),addEventListener("click",e=>{e.isTrusted&&I("click")},{capture:!0,passive:!0})}const U="__frame_scroll",fe=150,de=310,pe=160,me=3e4;function he(){let e=0,t=!1,n=!1,c=!1,i=0;const s=p=>{try{sessionStorage.setItem(U,JSON.stringify({y:p}))}catch{}},f=()=>{if(t){t=!1;return}n=!0,clearTimeout(e),e=setTimeout(()=>s(scrollY),fe)};try{addEventListener("scroll",f,{passive:!0}),addEventListener("pagehide",()=>{clearTimeout(e),s(scrollY)})}catch{}const a=()=>{let p;try{p=sessionStorage.getItem(U)}catch{return null}if(p===null)return null;let b;try{b=JSON.parse(p)}catch{b=null}const l=b?.y;if(!(typeof l=="number"&&Number.isFinite(l)&&l>=0)){try{sessionStorage.removeItem(U)}catch{}return null}return l};let _=!1;const h=p=>{try{const b=scrollY;scrollTo({top:p,left:0,behavior:"instant"}),i=p,c=!0,s(p);const l=scrollY;l!==b&&(t=!0),l!==p&&!_&&(_=!0,addEventListener("load",()=>{try{if(scrollY===l){const g=a();h(g!==null?g:i)}}catch{}},{once:!0}))}catch{}},o=()=>{try{return!!location.hash}catch{return!0}};let u=!1;const d=()=>{try{if(u||innerWidth>de||innerHeight>pe)return;u=!0;const p=Date.now(),b=()=>{try{removeEventListener("resize",b)}catch{}if(Date.now()-p>me||n||o())return;const l=a();h(l!==null?l:i)};addEventListener("resize",b)}catch{}};let m=!1,y=!1;return{restore(){if(m||(m=!0,o()))return;const p=a();p!==null&&(h(p),d())},promoted(){if(y||(y=!0,o()))return;const p=a();p!==null?(h(p),d()):c&&h(i)}}}function ge(e,t,n){const c=[...t.values()].filter(i=>i.targets.some(s=>s.startsWith(e+".")));return{wrap(i,s){const f=`${e}.${i}`,a=c.filter(_=>_.targets.includes(f));return a.length===0?(..._)=>{try{return s(..._)}catch(h){return Promise.reject(h)}}:(..._)=>{let h=_;for(const u of a){const d=u.module.parameters;if(d)try{h=d(h)}catch{return Promise.reject({code:"transform_error",id:u.id,scope:e,message:"parameters transform failed"})}}let o;try{o=s(...h)}catch(u){o=Promise.reject(u)}return o.then(u=>{for(let d=a.length-1;d>=0;d--){const m=a[d],y=m.module.returns;if(y)try{u=y(u)}catch{return n({id:m.id,scope:e,leg:"returns"}),u}}return u},u=>{for(let d=a.length-1;d>=0;d--){const m=a[d],y=m.module.throws;if(y)try{u=y(u)}catch{return n({id:m.id,scope:e,leg:"throws"}),Promise.reject(u)}}return Promise.reject(u)})}}}}function _e(e,t,n,c=()=>{}){const i=new Set(e.changes??[]),s=new Map;for(const f of i){const a=t[f];a&&s.set(f,a)}return{contract:e.contract,changes:i,flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:s,shellOrigin:n.shellOrigin,mount:n.mount,pipe:f=>ge(f,s,c)}}(function(){const e=Object.defineProperty,t=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let c=0;for(let i=0;i<n.length;i++){const s=n[i];try{e(t,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[s]}catch{}try{e(t,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[s]=="function"&&c++}if(c&&window!==top)try{parent.postMessage({__frame_rtc_lockdown_failed:c},"*")}catch{}})();const ye=1e4,be=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function V(e){for(const t of be)if(t.endsWith(":*"))try{const n=new URL(e);if(`${n.protocol}//${n.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}const T=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),z=window.__FRAME_PREAMBLE?.transforms,q=window.__FRAME_PREAMBLE?.comments,$=window.__FRAME_PREAMBLE?.translate,C=/^[\w.-]+\.js$/,ve=/^[a-z][a-z0-9_-]{0,63}$/;let X=null,P=null;function B(e,t,n){try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}let F=!1;function Q(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,F=!0):F&&(delete t.dataset.theme,t.style.colorScheme="",F=!1)}const M=Object.assign(Object.create(null),{mcp:Object.assign(Object.create(null),{watchTool:{handlerArg:3}})}),R=new Map;function Z(e,t){const n=R.get(e);if(!n)return;const c=Object.assign(Object.create(null),t);Object.assign(n.impl,c),n.impl.__settled=()=>Promise.reject({code:"capability_removed",message:`${e}: method not in this runtime`});const i=n.queue;n.queue=[];for(const s of i){const f=c[s.method];if(f)if(M[e]?.[s.method])try{s.resolve(f(...s.args))}catch{k(s,M[e][s.method].handlerArg,{code:"transform_error",message:`${e}.${s.method} rejected its arguments`})}else f(...s.args).then(s.resolve,s.reject);else{const a={code:"capability_removed",message:`${e}.${s.method} is not in this runtime`},_=M[e]?.[s.method];if(_){k(s,_.handlerArg,a);continue}s.reject(a)}}}function Ee(e,t){const n=R.get(e);if(!n)return;n.impl.__settled=()=>Promise.reject(t);const c=n.queue;n.queue=[];for(const i of c){const s=M[e]?.[i.method];if(s){k(i,s.handlerArg,t);continue}i.reject(t)}}function N(e,t){const n=oe[e];if(!n){Ee(e,t);return}Z(e,Object.fromEntries(Object.entries(n).map(([c,i])=>[c,()=>Promise.resolve(i)])))}function k(e,t,n){if(e.syncState?.dead)return;const c=e.args[t];typeof c=="function"&&queueMicrotask(()=>{if(!e.syncState?.dead)try{c({type:"error",error:n})}catch(i){se(i)}})}const H=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(H&&H.writable===!1)){le(),ue();let e=null;try{e=he()}catch{}const t=H?.value??{};B(window,"claude",t);const n=o=>{const u={impl:Object.create(null),queue:[]};R.set(o,u);const d=u.impl,m=ie[o],y=m===void 0?d:()=>{},p=new Proxy(y,{apply:(b,l,g)=>{const v=m,O=d[v]??d.__settled;return O?O(...g):new Promise((E,w)=>{u.queue.push({method:v,args:g,resolve:E,reject:w})})},get:(b,l)=>{if(typeof l!="string"||l==="then"||l==="toJSON"||l==="valueOf")return;if(l==="toString")return Object.prototype.toString;if(m!==void 0&&(l==="call"||l==="apply"||l==="bind"))return Function.prototype[l];const g=M[o]?.[l];return g?(...v)=>{if(typeof v[g.handlerArg]!="function")throw new TypeError(`${o}.${l} requires a handler function`);const O=d[l];if(O)return O(...v);if(d.__settled){const S={dead:!1},A={args:[...v],syncState:S};return d.__settled().catch(D=>k(A,g.handlerArg,D)),()=>{S.dead=!0}}let E=null;const w={dead:!1};return u.queue.push({method:l,args:v,resolve:S=>{E=typeof S=="function"?S:null,w.dead&&E?.()},reject:()=>{},syncState:w}),()=>{w.dead=!0,E?.()}}:(...v)=>{const O=d[l]??d.__settled;return O?O(...v):new Promise((E,w)=>{u.queue.push({method:l,args:v,resolve:E,reject:w})})}},set:()=>!1});B(t,o,p)};for(const o of Object.keys(T)){if(t[o]!==void 0){B(t,o,t[o]);continue}n(o)}let c=null,i=null,s=0;const f=o=>{o.source!==parent||!V(o.origin)||ne(o.data)&&(c=o.data.__frame_init,P=o.origin,removeEventListener("message",f),clearTimeout(s),i?.())};addEventListener("message",f),parent.postMessage({__frame_connect:!0},"*");const a=new Promise(o=>{i=o,s=setTimeout(()=>{removeEventListener("message",f),o()},ye)}),_=document.readyState==="loading"?new Promise(o=>document.addEventListener("DOMContentLoaded",()=>o(),{once:!0})):Promise.resolve();_.then(()=>{try{e?.restore()}catch{}});const h=o=>{if(!(o.source!==parent||!V(o.origin))&&Y(o.data)){removeEventListener("message",h);try{e?.promoted()}catch{}}};addEventListener("message",h),a.then(async()=>{if(!c||!P){for(const r of R.keys())N(r,{code:"not_granted",message:"frame initialization did not arrive - capability unavailable"});return}Q(c.theme);const o=P;let u=!1,d=!1;addEventListener("message",r=>{if(r.source!==parent||r.origin!==o)return;re(r.data)&&Q(r.data.__frame_theme.theme);const j=r.data?.__fc_mode;j&&typeof j=="object"&&!u&&q&&C.test(q)&&(u=!0,m(q).then(W=>W.install?.(o,j.on===!0)).catch(()=>{}));const L=r.data?.__ft_cmd;L&&typeof L=="object"&&!d&&$&&C.test($)&&(d=!0,m($).then(W=>W.install?.(o,L)).catch(()=>{}))});const m=r=>ee(()=>import("/_runtime/"+r),void 0),y=Object.keys(c.capabilities??{});for(const r of y)Object.hasOwn(T,r)||ve.test(r)&&t[r]===void 0&&(n(r),N(r,{code:"capability_disabled",message:"capability not in this runtime generation"}));const p=y.filter(r=>Object.hasOwn(T,r)).map(r=>[r,T[r]]).filter(r=>typeof r[1]=="string"&&C.test(r[1])),[b,...l]=await Promise.allSettled([z&&C.test(z)?m(z):Promise.resolve({}),...p.map(([,r])=>m(r))]),g=P;X=_e(c,b.status==="fulfilled"&&b.value?.TRANSFORMS||{},{shellOrigin:g,mount:Z},r=>parent.postMessage({__frame_cap_telemetry:r},g));const v=r=>parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:r}},g),O=X;l.forEach((r,j)=>{const L=p[j][0];if(r.status!=="fulfilled"){v(L);return}try{r.value?.install?.(O)}catch{v(L)}});for(const[r,j]of R)if(!(j.queue.length===0&&Object.keys(j.impl).length>0)){if(y.includes(r)){N(r,{code:"capability_disabled",message:"capability not available in this session"});continue}N(r,{code:"not_granted",message:"capability not available in this session"})}await _,parent.postMessage({__frame_ready:!0},P);let E=-1,w=0;const S=()=>{w=0;const r=Math.max(document.documentElement.scrollHeight,document.body?document.body.scrollHeight:0);r!==E&&(E=r,parent.postMessage({__frame_size:!0,h:r},g))},A=()=>{w||(w=setTimeout(S,200))},D=new ResizeObserver(A);D.observe(document.documentElement),document.body&&D.observe(document.body),document.addEventListener("load",A,!0),document.fonts?.ready.then(A,()=>{}),addEventListener("beforeprint",()=>{E=-1,S()}),A(),addEventListener("message",r=>{if(!(r.source!==parent||r.origin!==g)&&Y(r.data)){try{e?.promoted()}catch{}E=-1,A()}})})}})();</script><!-- /frame-runtime --><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Pre-Workshop Survey: Stata vs R Fluency by Role</title>
+<style>
+  .viz-root {
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+    --cell-alt:       #f6f5f2;
+    --s1: #2a78d6; /* Statistician */
+    --s2: #1baf7a; /* Statistician & Researcher */
+    --s3: #eda100; /* Researcher */
+    --s4: #008300; /* Research Software Engineer */
+    --s5: #4a3aa7; /* Researcher & Data Scientist */
+  }
+  @media (prefers-color-scheme: dark) {
+    .viz-root {
+      --surface-1:      #1a1a19;
+      --page-plane:     #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --border:         rgba(255,255,255,0.10);
+      --cell-alt:       #202020;
+      --s1: #3987e5;
+      --s2: #199e70;
+      --s3: #c98500;
+      --s4: #008300;
+      --s5: #9085e9;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --border:         rgba(255,255,255,0.10);
+    --cell-alt:       #202020;
+    --s1: #3987e5;
+    --s2: #199e70;
+    --s3: #c98500;
+    --s4: #008300;
+    --s5: #9085e9;
+  }
+  :root[data-theme="light"] .viz-root {
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+    --cell-alt:       #f6f5f2;
+    --s1: #2a78d6;
+    --s2: #1baf7a;
+    --s3: #eda100;
+    --s4: #008300;
+    --s5: #4a3aa7;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .viz-root {
+    background: var(--page-plane);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+    padding: 32px 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px 24px;
+    max-width: 680px;
+    width: 100%;
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
+  h1 { font-size: 19px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0 0 26px;
+    max-width: 58ch;
+  }
+
+  .plot-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .y-axis-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .plot-core {
+    display: grid;
+    grid-template-columns: 78px repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px) 34px;
+  }
+  .row-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    padding-right: 10px;
+    text-align: right;
+  }
+  .cell {
+    position: relative;
+    background: var(--cell-alt);
+    border: 1px solid var(--gridline);
+    margin: -1px 0 0 -1px;
+  }
+  .dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1.5px solid var(--surface-1);
+  }
+  .col-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    padding-top: 6px;
+  }
+  .x-axis-title {
+    grid-column: 2 / span 3;
+    text-align: center;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-top: 4px;
+  }
+
+  .legend {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gridline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-primary);
+  }
+  .swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex: none;
+  }
+  .legend-item .n {
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .footnote {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--gridline);
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .table-toggle { margin-top: 16px; }
+  .table-toggle summary {
+    font-size: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    user-select: none;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--gridline);
+    font-variant-numeric: tabular-nums;
+  }
+  th {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.03em;
+  }
+  td:last-child, th:last-child { text-align: right; }
+</style>
+
+<div class="viz-root">
+  <div class="card">
+    <p class="eyebrow">Stata Translation Workshop · Pre-Workshop Survey</p>
+    <h1>Stata fluency vs. R fluency, by role</h1>
+    <p class="subtitle">Each dot is one respondent. Since fluency has 
+only 3 levels (No / Occasional / Fluent), dots are spread out within 
+each cell so overlapping respondents stay visible — position within a 
+cell carries no meaning beyond the cell itself.</p>
+
+    <div class="plot-wrap">
+      <div class="y-axis-title">R fluency</div>
+      <div class="plot-core">
+        <!-- row 1: R = Fluent -->
+        <div class="row-label">Fluent</div>
+        <div class="cell"><!-- Stata No, R Fluent: 0 --></div>
+        <div class="cell">
+          <!-- Stata Occasional, R Fluent: 3 (Stat&Res, Res&DataSci, Statistician) -->
+          <div class="dot" style="left: calc(55px + 8.6px - 8px); top: calc(55px - 0.0px - 8px); background: var(--s2);" title="Statistician &amp; Researcher"></div>
+          <div class="dot" style="left: calc(55px - 10.9px - 8px); top: calc(55px - 10.0px - 8px); background: var(--s5);" title="Researcher &amp; Data Scientist"></div>
+          <div class="dot" style="left: calc(55px + 1.7px - 8px); top: calc(55px + 19.1px - 8px); background: var(--s1);" title="Statistician"></div>
+        </div>
+        <div class="cell"><!-- Stata Fluent, R Fluent: 0 --></div>
+
+        <!-- row 2: R = Occasional -->
+        <div class="row-label">Occasional</div>
+        <div class="cell">
+          <!-- Stata No, R Occasional: 1 (RSE) -->
+          <div class="dot" style="left: calc(55px - 8px); top: calc(55px - 8px); background: var(--s4);" title="Research Software Engineer"></div>
+        </div>
+        <div class="cell">
+          <!-- Stata Occasional, R Occasional: 1 (Statistician) -->
+          <div class="dot" style="left: calc(55px - 8px); top: calc(55px - 8px); background: var(--s1);" title="Statistician"></div>
+        </div>
+        <div class="cell">
+          <!-- Stata Fluent, R Occasional: 8 (Statistician x4, Researcher x2, Stat&Res x2) -->
+          <div class="dot" style="left: calc(55px + 9.2px - 8px); top: calc(55px - 0.0px - 8px); background: var(--s1);" title="Statistician"></div>
+          <div class="dot" style="left: calc(55px - 11.8px - 8px); top: calc(55px - 10.8px - 8px); background: var(--s1);" title="Statistician"></div>
+          <div class="dot" style="left: calc(55px + 1.8px - 8px); top: calc(55px + 20.6px - 8px); background: var(--s1);" title="Statistician"></div>
+          <div class="dot" style="left: calc(55px + 14.9px - 8px); top: calc(55px - 19.4px - 8px); background: var(--s1);" title="Statistician"></div>
+          <div class="dot" style="left: calc(55px - 27.3px - 8px); top: calc(55px + 4.8px - 8px); background: var(--s3);" title="Researcher"></div>
+          <div class="dot" style="left: calc(55px + 25.9px - 8px); top: calc(55px + 16.5px - 8px); background: var(--s3);" title="Researcher"></div>
+          <div class="dot" style="left: calc(55px - 8.7px - 8px); top: calc(55px - 32.2px - 8px); background: var(--s2);" title="Statistician &amp; Researcher"></div>
+          <div class="dot" style="left: calc(55px - 16.5px - 8px); top: calc(55px + 31.8px - 8px); background: var(--s2);" title="Statistician &amp; Researcher"></div>
+        </div>
+
+        <!-- row 3: R = No -->
+        <div class="row-label">No</div>
+        <div class="cell"><!-- Stata No, R No: 0 --></div>
+        <div class="cell"><!-- Stata Occasional, R No: 0 --></div>
+        <div class="cell"><!-- Stata Fluent, R No: 0 --></div>
+
+        <div></div>
+        <div class="col-label">No</div>
+        <div class="col-label">Occasional</div>
+        <div class="col-label">Fluent</div>
+        <div class="x-axis-title">Stata fluency</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="swatch" style="background: var(--s1)"></span>Statistician <span class="n">(6)</span></div>
+      <div class="legend-item"><span class="swatch" style="background: var(--s2)"></span>Statistician &amp; Researcher <span class="n">(3)</span></div>
+      <div class="legend-item"><span class="swatch" style="background: var(--s3)"></span>Researcher <span class="n">(2)</span></div>
+      <div class="legend-item"><span class="swatch" style="background: var(--s4)"></span>Research Software Engineer <span class="n">(1)</span></div>
+      <div class="legend-item"><span class="swatch" style="background: var(--s5)"></span>Researcher &amp; Data Scientist <span class="n">(1)</span></div>
+    </div>
+
+    <p class="footnote">The dominant pattern (8 of 13 respondents) is 
+Stata-fluent / R-occasional, spanning every role. The 3 respondents who 
+are R-fluent instead of Stata-fluent are the ones with a second role 
+attached (Statistician &amp; Researcher, Researcher &amp; Data 
+Scientist) plus one solo Statistician — consistent with the negative 
+Stata↔R correlation shown separately (ρ = −0.59).</p>
+
+    <details class="table-toggle">
+      <summary>View as table</summary>
+      <table>
+        <thead><tr><th>Role</th><th>Stata</th><th>R</th><th>Respondents</th></tr></thead>
+        <tbody>
+          <tr><td>Statistician</td><td>Occasional</td><td>Occasional</td><td>1</td></tr>
+          <tr><td>Statistician</td><td>Fluent</td><td>Occasional</td><td>4</td></tr>
+          <tr><td>Statistician</td><td>Occasional</td><td>Fluent</td><td>1</td></tr>
+          <tr><td>Researcher</td><td>Fluent</td><td>Occasional</td><td>2</td></tr>
+          <tr><td>Statistician &amp; Researcher</td><td>Fluent</td><td>Occasional</td><td>2</td></tr>
+          <tr><td>Statistician &amp; Researcher</td><td>Occasional</td><td>Fluent</td><td>1</td></tr>
+          <tr><td>Researcher &amp; Data Scientist</td><td>Occasional</td><td>Fluent</td><td>1</td></tr>
+          <tr><td>Research Software Engineer</td><td>No</td><td>Occasional</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </div>
+</div>
+
+</body></html>
